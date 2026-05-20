@@ -1,0 +1,3 @@
+export const icVceTrainrrBATTLE_READING_TEXT = `Ladies and gentlemen, today I stand before you not just as a speaker, but as a believer in the extraordinary potential that lives within each and every one of us. Great things are never accomplished alone — they are built brick by brick through courage, persistence, and the willingness to keep moving forward even when the path feels uncertain.
+
+Every voice in this room carries a story worth hearing. When we speak with clarity and conviction, we do more than share words — we invite others to see the world through our eyes and to believe in what is possible. That is the true power of public speaking, and it begins with the simple decision to stand up and be heard.`;

@@ -1,17 +1,17 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {useEffect} from 'react';
 
-import {recordAppVisit} from './PblicVceTrainer/data/streakStore';
-import StackNav from './PblicVceTrainer/routes/StackNav.tsx';
+import {icVceTrainrrRecordAppVisit} from './IcVceTrainrr/IcVceTrainrrData/IcVceTrainrrStreakStore';
+import IcVceTrainrrStackNav from './IcVceTrainrr/IcVceTrainrrRoutes/IcVceTrainrrStackNav.tsx';
 
 const App = () => {
   useEffect(() => {
-    recordAppVisit();
+    icVceTrainrrRecordAppVisit();
   }, []);
 
   return (
     <NavigationContainer>
-      <StackNav />
+      <IcVceTrainrrStackNav />
     </NavigationContainer>
   );
 };

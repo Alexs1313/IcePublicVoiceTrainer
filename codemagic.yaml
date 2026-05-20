@@ -1,20 +1,20 @@
 workflows:
   ios-workflow:
-    name: 'The Ice Voice Trainer'
+    name: 'The Ice Public Voice'
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: VoiiceTrainerAPIKey
+      app_store_connect: VoiicePublicAPIKey
     environment:
       xcode: '26.0'
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.ghjqorp.fljds.kjsd
+        bundle_identifier: com.sjfls.reramsf.alskfm
       vars:
-        BUNDLE_ID: com.ghjqorp.fljds.kjsd
+        BUNDLE_ID: com.sjfls.reramsf.alskfm
         XCODE_WORKSPACE: IcePublicVoiceTrainer.xcworkspace
         XCODE_SCHEME: IcePublicVoiceTrainer
-        APP_STORE_APPLE_ID: 6771350806
+        APP_STORE_APPLE_ID: 6771431281
     scripts:
       - name: Install npm dependencies
         script: |
