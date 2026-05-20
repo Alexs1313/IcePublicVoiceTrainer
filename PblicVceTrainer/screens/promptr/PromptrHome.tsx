@@ -6,7 +6,10 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import Layout from '../../components/Layout';
 import PromptrStreakHeader from '../../components/promptr/PromptrStreakHeader';
-import {PROMPTR_CATEGORIES, type PromptrCategory} from '../../data/promptrTexts';
+import {
+  PROMPTR_CATEGORIES,
+  type PromptrCategory,
+} from '../../data/promptrTexts';
 import type {PromptrStackParamList} from '../../routes/promptrTypes';
 import {
   pblicvcepromptrAccentAlt,
@@ -93,30 +96,30 @@ export default PromptrHome;
 const styles = StyleSheet.create({
   content: {},
   body: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 20.332,
   },
   overline: {
     color: pblicvcepromptrAccentAlt,
-    fontSize: 13,
+    fontSize: 13.162,
     fontWeight: '600',
     letterSpacing: 1.4,
-    marginBottom: 6,
+    marginBottom: 6.12,
     marginTop: 14,
   },
   heading: {
     color: pblicvcepromptrTitle,
-    fontSize: 28,
+    fontSize: 28.01,
     fontWeight: '800',
-    marginBottom: 8,
+    marginBottom: 8.133,
   },
   subtitle: {
     color: pblicvcepromptrMuted,
-    fontSize: 15,
+    fontSize: 15.229,
     lineHeight: 21,
-    marginBottom: 20,
+    marginBottom: 20.12,
   },
   cards: {
-    gap: 12,
+    gap: 12.021,
   },
   card: {
     flexDirection: 'row',
@@ -127,26 +130,26 @@ const styles = StyleSheet.create({
     shadowColor: '#0A1F33',
     shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.06,
-    shadowRadius: 12,
+    shadowRadius: 12.12,
     elevation: 3,
   },
   cardPressed: {
     opacity: 0.92,
   },
   cardIcon: {
-    width: 64,
-    height: 64,
+    width: 64.021,
+    height: 64.021,
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 14,
+    marginRight: 14.021,
   },
   cardIconText: {
-    fontSize: 26,
+    fontSize: 26.213,
   },
   cardBody: {
     flex: 1,
-    paddingRight: 8,
+    paddingRight: 8.021,
   },
   cardTitle: {
     color: pblicvcepromptrTitle,

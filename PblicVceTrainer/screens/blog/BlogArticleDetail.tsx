@@ -173,21 +173,21 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   body: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 20.332,
   },
   toolbar: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 16,
+    marginBottom: 16.162,
   },
   toolbarActions: {
     flexDirection: 'row',
     gap: 10,
   },
   toolBtn: {
-    width: 36,
-    height: 36,
+    width: 36.612,
+    height: 36.612,
     borderRadius: 14,
     backgroundColor: '#0000000D',
     alignItems: 'center',
@@ -198,11 +198,11 @@ const styles = StyleSheet.create({
   },
   shareIcon: {
     color: pblicvcepromptrMuted,
-    fontSize: 18,
+    fontSize: 18.162,
     fontWeight: '600',
   },
   favIcon: {
-    fontSize: 18,
+    fontSize: 18.332,
     color: pblicvcepromptrMuted,
   },
   favIconActive: {
@@ -210,33 +210,33 @@ const styles = StyleSheet.create({
   },
   meta: {
     color: '#8AA8B8',
-    fontSize: 13,
+    fontSize: 13.162,
     fontWeight: '400',
   },
   title: {
     color: pblicvcepromptrTitle,
-    fontSize: 24,
+    fontSize: 24.121,
     fontWeight: '700',
     lineHeight: 32,
-    marginBottom: 12,
+    marginBottom: 12.162,
   },
   lead: {
     color: '#54C0DA',
-    fontSize: 15,
+    fontSize: 15.129,
     lineHeight: 24,
     fontStyle: 'italic',
-    marginBottom: 16,
+    marginBottom: 16.55,
   },
   divider: {
     height: 1,
     backgroundColor: '#6CD0F740',
-    marginBottom: 18,
+    marginBottom: 18.12,
   },
   paragraph: {
     color: pblicvcepromptrMuted,
-    fontSize: 15,
+    fontSize: 15.129,
     lineHeight: 24,
-    marginBottom: 16,
+    marginBottom: 16.128,
   },
   pressed: {
     opacity: 0.9,

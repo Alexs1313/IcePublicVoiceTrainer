@@ -161,22 +161,22 @@ export default BattleVoting;
 const styles = StyleSheet.create({
   content: {},
   body: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 20.12,
     alignItems: 'center',
   },
   overline: {
     color: '#F5A623',
-    fontSize: 13,
+    fontSize: 13.162,
     fontWeight: '700',
     letterSpacing: 1.2,
-    marginBottom: 8,
-    marginTop: 8,
+    marginBottom: 8.62,
+    marginTop: 8.62,
   },
   heading: {
     color: pblicvcepromptrTitle,
-    fontSize: 26,
+    fontSize: 26.121,
     fontWeight: '800',
-    marginBottom: 8,
+    marginBottom: 8.12,
     textAlign: 'center',
   },
   subtitle: {
@@ -187,14 +187,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   timerWrap: {
-    marginBottom: 52,
+    marginBottom: 52.42,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 40,
+    marginTop: 40.81,
   },
   timerText: {
     color: pblicvcepromptrTitle,
-    fontSize: 28,
+    fontSize: 28.01,
     fontWeight: '700',
   },
   cardsRow: {
@@ -207,21 +207,21 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   voteCard: {
-    borderRadius: 22,
+    borderRadius: 22.12,
     alignItems: 'center',
-    minHeight: 190,
+    minHeight: 190.63,
     justifyContent: 'center',
     shadowColor: '#0A1F33',
     shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.1,
-    shadowRadius: 12,
+    shadowRadius: 12.11,
     elevation: 4,
   },
   voteDot: {
-    width: 20,
+    width: 20.162,
     height: 20,
-    borderRadius: 6,
-    marginBottom: 12,
+    borderRadius: 6.16,
+    marginBottom: 12.12,
   },
   voteName: {
     color: '#FFFFFF',
@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
   status: {
     color: pblicvcepromptrMuted,
     fontSize: 13,
-    marginBottom: 18,
+    marginBottom: 18.12,
   },
   endBtn: {
     width: 150,

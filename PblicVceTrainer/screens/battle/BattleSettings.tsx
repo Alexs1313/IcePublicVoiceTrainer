@@ -206,43 +206,43 @@ const styles = StyleSheet.create({
     marginBottom: 22,
   },
   backBtn: {
-    width: 35,
-    height: 35,
-    borderRadius: 14,
+    width: 35.12,
+    height: 35.12,
+    borderRadius: 14.21,
     backgroundColor: '#54C0DA1A',
     alignItems: 'center',
     justifyContent: 'center',
   },
   heading: {
     color: pblicvcepromptrTitle,
-    fontSize: 20,
+    fontSize: 20.12,
     fontWeight: '700',
     marginBottom: 2,
   },
   subtitle: {
     color: '#8AA8B8',
-    fontSize: 12,
+    fontSize: 12.12,
     fontWeight: '400',
     marginBottom: 4,
   },
   section: {
     color: pblicvcepromptrTitle,
-    fontSize: 15,
+    fontSize: 15.162,
     fontWeight: '700',
     marginBottom: 12,
   },
   optionRow: {
     flexDirection: 'row',
     gap: 10,
-    marginBottom: 22,
+    marginBottom: 22.1,
   },
   optionFlex: {
     flex: 1,
   },
   optionCard: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 18,
-    minHeight: 100,
+    borderRadius: 18.22,
+    minHeight: 100.142,
     shadowColor: '#0A1F33',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.05,
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   optionIcon: {
-    fontSize: 28,
+    fontSize: 28.21,
   },
   optionIconSelected: {},
   sizeAa: {
@@ -271,22 +271,22 @@ const styles = StyleSheet.create({
   },
   optionLabel: {
     color: pblicvcepromptrTitle,
-    fontSize: 14,
+    fontSize: 14.21,
     fontWeight: '700',
   },
   optionLabelSelected: {
     color: '#FFFFFF',
   },
   cta: {
-    borderRadius: 16,
-    height: 56,
+    borderRadius: 16.12,
+    height: 56.14,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 4,
   },
   ctaText: {
     color: '#FFFFFF',
-    fontSize: 17,
+    fontSize: 17.17,
     fontWeight: '700',
   },
   pressed: {

@@ -145,19 +145,18 @@ const BattleEnterPlayers = () => {
 export default BattleEnterPlayers;
 
 const styles = StyleSheet.create({
-  content: {},
   body: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 20.12,
   },
   headerRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
-    marginBottom: 22,
+    marginBottom: 22.52,
   },
   backBtn: {
-    width: 35,
-    height: 35,
+    width: 35.12,
+    height: 35.12,
     borderRadius: 14,
     backgroundColor: '#54C0DA1A',
     alignItems: 'center',
@@ -165,17 +164,17 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: pblicvcepromptrTitle,
-    fontSize: 20,
+    fontSize: 20.12,
     fontWeight: '700',
     marginBottom: 2,
   },
   subtitle: {
     color: '#8AA8B8',
-    fontSize: 12,
+    fontSize: 12.12,
     fontWeight: '400',
   },
   field: {
-    marginBottom: 16,
+    marginBottom: 16.12,
   },
   labelRow: {
     flexDirection: 'row',
@@ -184,13 +183,13 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   colorDot: {
-    width: 12,
-    height: 12,
+    width: 12.1112,
+    height: 12.1112,
     borderRadius: 4,
   },
   label: {
     color: '#4A6A7A',
-    fontSize: 14,
+    fontSize: 14.12,
     fontWeight: '600',
   },
   input: {
@@ -205,20 +204,20 @@ const styles = StyleSheet.create({
   },
   infoBox: {
     backgroundColor: '#E4AD1B14',
-    borderRadius: 16,
-    padding: 16,
+    borderRadius: 16.12,
+    padding: 16.12,
     marginBottom: 22,
     borderWidth: 1,
     borderColor: '#E4AD1B33',
   },
   infoTitle: {
     color: '#C98A00',
-    fontSize: 14,
+    fontSize: 14.12,
     fontWeight: '700',
   },
   infoText: {
     color: '#8A6A2A',
-    fontSize: 13,
+    fontSize: 13.15,
     lineHeight: 20,
   },
   cta: {

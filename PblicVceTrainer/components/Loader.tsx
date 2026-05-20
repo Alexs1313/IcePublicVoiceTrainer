@@ -1,11 +1,9 @@
 import {ImageBackground, ScrollView, StyleSheet, View} from 'react-native';
-
 import React, {useEffect} from 'react';
-
 import {useNavigation} from '@react-navigation/native';
 import WebView from 'react-native-webview';
 
-const wudlanndvildexplorrhtmlloader = `  <!DOCTYPE html>
+const htmlWlcmLoader = `  <!DOCTYPE html>
     <html>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,28 +153,28 @@ const wudlanndvildexplorrhtmlloader = `  <!DOCTYPE html>
     </html>`;
 
 const Loader = () => {
-  const wudlanndvildexplorrNavigation = useNavigation();
+  const navigation = useNavigation();
 
   useEffect(() => {
-    const wudlanndvildexplorrTimer = setTimeout(() => {
-      wudlanndvildexplorrNavigation.navigate('Onboarding' as never);
-    }, 6000);
+    const timer = setTimeout(() => {
+      navigation.navigate('Onboarding' as never);
+    }, 6315);
 
     return () => {
-      clearTimeout(wudlanndvildexplorrTimer);
+      clearTimeout(timer);
     };
-  }, [wudlanndvildexplorrNavigation]);
+  }, [navigation]);
 
   return (
     <ImageBackground
       source={require('../assets/images/pblicvcetrainload.png')}
-      style={styles.wudlanndvildexplorrimageBg}>
+      style={styles.imageBg}>
       <ScrollView
-        contentContainerStyle={styles.wudlanndvildexplorrscrollContent}
+        contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}>
-        <View style={styles.wudlanndvildexplorrbottomWrap}>
+        <View style={styles.bottomWrap}>
           <WebView
-            source={{html: wudlanndvildexplorrhtmlloader}}
+            source={{html: htmlWlcmLoader}}
             scrollEnabled={false}
             originWhitelist={['*']}
             style={{width: 260, height: 90, backgroundColor: 'transparent'}}
@@ -190,17 +188,17 @@ const Loader = () => {
 export default Loader;
 
 const styles = StyleSheet.create({
-  wudlanndvildexplorrimageBg: {
+  imageBg: {
     flex: 1,
   },
-  wudlanndvildexplorrscrollContent: {
+  scrollContent: {
     flexGrow: 1,
   },
 
-  wudlanndvildexplorrbottomWrap: {
+  bottomWrap: {
     position: 'absolute',
     bottom: 0,
     alignSelf: 'center',
-    paddingBottom: 40,
+    paddingBottom: 40.12,
   },
 });
