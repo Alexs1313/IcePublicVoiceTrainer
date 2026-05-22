@@ -3,154 +3,107 @@ import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import WebView from 'react-native-webview';
 
-const icVceTrainrrHtmlWlcmLoader = `  <!DOCTYPE html>
-    <html>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-          html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            overflow: hidden;
+const icVceTrainrrHtmlWlcmLoader = ` <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+      <style>
+        body {
+          margin: 0;
+          background: transparent;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+
+        .loader {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          --color: hsl(0, 0%, 87%);
+          --animation: 2s ease-in-out infinite;
+        }
+
+        .circle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          width: 20px;
+          height: 20px;
+          border: solid 2px var(--color);
+          border-radius: 50%;
+          margin: 0 10px;
+          background-color: transparent;
+          animation: circle-keys var(--animation);
+        }
+
+        .dot {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: var(--color);
+          animation: dot-keys var(--animation);
+        }
+
+        .outline {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          animation: outline-keys var(--animation);
+        }
+
+        .circle:nth-child(2) { animation-delay: 0.3s; }
+        .circle:nth-child(3) { animation-delay: 0.6s; }
+        .circle:nth-child(4) { animation-delay: 0.9s; }
+
+        .circle:nth-child(2) .dot { animation-delay: 0.3s; }
+        .circle:nth-child(3) .dot { animation-delay: 0.6s; }
+        .circle:nth-child(4) .dot { animation-delay: 0.9s; }
+
+        .circle:nth-child(1) .outline { animation-delay: 0.9s; }
+        .circle:nth-child(2) .outline { animation-delay: 1.2s; }
+        .circle:nth-child(3) .outline { animation-delay: 1.5s; }
+        .circle:nth-child(4) .outline { animation-delay: 1.8s; }
+
+        @keyframes circle-keys {
+          0% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.5); opacity: 0.5; }
+          100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes dot-keys {
+          0% { transform: scale(1); }
+          50% { transform: scale(0); }
+          100% { transform: scale(1); }
+        }
+
+        @keyframes outline-keys {
+          0% {
+            transform: scale(0);
+            outline: solid 20px var(--color);
+            opacity: 1;
           }
-
-          body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          100% {
+            transform: scale(1);
+            outline: solid 0 transparent;
+            opacity: 0;
           }
-
-          .loader {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 5px;
-          }
-
-          .loading-text {
-            color: white;
-            font-size: 14pt;
-            font-weight: 600;
-            margin-left: 10px;
-            font-family: Arial, sans-serif;
-          }
-
-          .dot {
-            margin-left: 3px;
-            animation: blink 1.5s infinite;
-          }
-
-          .dot:nth-child(2) {
-            animation-delay: 0.3s;
-          }
-
-          .dot:nth-child(3) {
-            animation-delay: 0.6s;
-          }
-
-          .loading-bar-background {
-            --height: 30px;
-            display: flex;
-            align-items: center;
-            box-sizing: border-box;
-            padding: 5px;
-            width: 200px;
-            height: var(--height);
-            background-color: #212121;
-            box-shadow: #0c0c0c -2px 2px 4px 0px inset;
-            border-radius: calc(var(--height) / 2);
-          }
-
-          .loading-bar {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            --height: 20px;
-            width: 0%;
-            height: var(--height);
-            overflow: hidden;
-            background: linear-gradient(
-              0deg,
-              rgba(222, 74, 15, 1) 0%,
-              rgba(249, 199, 79, 1) 100%
-            );
-            border-radius: calc(var(--height) / 2);
-            animation: loading 4s ease-out infinite;
-          }
-
-          .white-bars-container {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            gap: 18px;
-          }
-
-          .white-bar {
-            background: linear-gradient(
-              -45deg,
-              rgba(255, 255, 255, 1) 0%,
-              rgba(255, 255, 255, 0) 70%
-            );
-            width: 10px;
-            height: 45px;
-            opacity: 0.3;
-            transform: rotate(45deg);
-          }
-
-          @keyframes loading {
-            0% {
-              width: 0;
-            }
-            80% {
-              width: 100%;
-            }
-            100% {
-              width: 100%;
-            }
-          }
-
-          @keyframes blink {
-            0%,
-            100% {
-              opacity: 0;
-            }
-            50% {
-              opacity: 1;
-            }
-          }
-        </style>
-      </head>
-
-      <body>
-        <div class="loader">
-          <div class="loading-text">
-            Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
-          </div>
-
-          <div class="loading-bar-background">
-            <div class="loading-bar">
-              <div class="white-bars-container">
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </body>
-    </html>`;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="loader">
+        <div class="circle"><div class="dot"></div><div class="outline"></div></div>
+        <div class="circle"><div class="dot"></div><div class="outline"></div></div>
+        <div class="circle"><div class="dot"></div><div class="outline"></div></div>
+        <div class="circle"><div class="dot"></div><div class="outline"></div></div>
+      </div>
+    </body>
+  </html>`;
 
 const IcVceTrainrrLoader = () => {
   const navigation = useNavigation();

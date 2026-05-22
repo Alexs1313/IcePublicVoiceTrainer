@@ -1,5 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 const IcVceTrainrrLayout = ({
   children,
@@ -10,14 +11,18 @@ const IcVceTrainrrLayout = ({
   bounce?: boolean;
 }) => {
   return (
-    <View style={icVceTrainrrStyles.icVceTrainrrWudlanndvildexplorrlayBackground}>
+    <LinearGradient
+      colors={['rgb(185, 225, 234)', 'rgb(7, 149, 181)']}
+      style={icVceTrainrrStyles.icVceTrainrrWudlanndvildexplorrlayBackground}>
       <ScrollView
         bounces={bounce}
-        contentContainerStyle={icVceTrainrrStyles.icVceTrainrrWudlanndvildexplorrlayScrollContent}
+        contentContainerStyle={
+          icVceTrainrrStyles.icVceTrainrrWudlanndvildexplorrlayScrollContent
+        }
         showsVerticalScrollIndicator={false}>
         {children}
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 };
 

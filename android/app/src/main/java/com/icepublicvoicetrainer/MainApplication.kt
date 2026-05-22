@@ -1,4 +1,4 @@
-package com.icepublicvoicetrainer
+package com.the.ice.publicvoice
 
 import android.app.Application
 import com.facebook.react.PackageList

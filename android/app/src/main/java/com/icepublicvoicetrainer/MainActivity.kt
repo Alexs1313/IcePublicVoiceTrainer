@@ -1,4 +1,4 @@
-package com.icepublicvoicetrainer
+package com.the.ice.publicvoice
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
